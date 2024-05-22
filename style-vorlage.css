@@ -1,0 +1,186 @@
+/* Einfacher Reset - Setzt Padding, Margin und Box-Sizing für alle Elemente zurück, um Browser-Inkonsistenzen zu vermeiden */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Grundlegende Stilisierung für den Body - Setzt Hintergrundfarbe, Schriftart, Linienhöhe und Textfarbe */
+  body {
+    background-color: #efefef; /* Leichte, angenehme Hintergrundfarbe */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Moderne, plattformübergreifende Schriftarten */
+    line-height: 1.6; /* Verbesserung der Lesbarkeit durch ausreichenden Zeilenabstand */
+    color: #333; /* Dunkle Textfarbe für guten Kontrast */
+    padding: 2rem; /* Innenabstand für das gesamte Body-Element */
+  }
+  
+  /* Header-Stil - Zentriert den Text und fügt Abstände und eine untere Grenze hinzu */
+  header {
+    text-align: center; /* Zentriert den Header-Inhalt */
+    padding: 2rem 0; /* Vertikaler Innenabstand */
+    border-bottom: 2px solid #7ad789; /* Untere Grenze zur Trennung vom restlichen Inhalt */
+  }
+  
+  /* Stil für das Hauptüberschrift h1 im Header - Setzt die Farbe */
+  h1 {
+    color: orangered; /* Auffällige Farbe für die Hauptüberschrift */
+    margin:auto;
+  }
+  
+  /* Hauptinhalt - Begrenzung der maximalen Breite, zentrierte Ausrichtung und visuelle Verbesserungen */
+  main {
+    max-width: 800px; /* Maximale Breite des Inhaltsbereichs */
+    margin: 2rem auto; /* Zentriert den Inhalt und fügt vertikalen Abstand hinzu */
+    padding: 2rem; /* Innenabstand innerhalb des Hauptinhaltsbereichs */
+    background: #fff; /* Weißer Hintergrund für besseren Kontrast */
+    border-radius: 8px; /* Abgerundete Ecken für ein weicheres Aussehen */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Leichte Schatten für einen 3D-Effekt */
+  }
+  
+  /* Abstand zwischen Abschnitten im Hauptinhalt */
+  section {
+    margin-bottom: 3rem; /* Abstand zwischen den Abschnitten */
+  }
+  
+  /* Stil für Unterüberschriften h2 - Setzt Farbe, Grenze und Abstände */
+  h2 {
+    color: #29213f; /* Dunklere Farbe für Unterüberschriften */
+    border-bottom: 2px solid #b056e0; /* Untere Grenze zur Trennung vom Inhalt */
+    padding-bottom: .5rem; /* Innenabstand unterhalb der Unterüberschrift */
+    margin-bottom: 1rem; /* Abstand unterhalb der Unterüberschrift */
+  }
+  
+  /* Listenstil - Entfernt Standardlistenpunkte und fügt benutzerdefinierte Punkte hinzu */
+  ul {
+    list-style: none; /* Entfernt die Standardlistenpunkte */
+    padding-left: 1rem; /* Abstand links für benutzerdefinierte Listenpunkte */
+  }
+  
+  ul li {
+    margin: .5rem 0; /* Abstand zwischen Listenpunkten */
+    position: relative; /* Ermöglicht die Positionierung der benutzerdefinierten Listenpunkte */
+    padding-left: 1.2rem; /* Abstand links für benutzerdefinierte Listenpunkte */
+  }
+  
+  ul li:before {
+    content: "•"; /* Benutzerdefinierte Listenpunkte */
+    position: absolute; /* Absolute Positionierung der Listenpunkte */
+    left: 0; /* Positionierung links */
+    color: orangered; /* Farbe der Listenpunkte */
+    font-size: 1.5rem; /* Größere Listenpunkte */
+    line-height: 1; /* Zeilenhöhe für die Listenpunkte */
+  }
+  
+  /* Bildergalerie - Flexibles Layout für eine gleichmäßige Verteilung der Bilder */
+  .dog-gallery {
+    display: flex; /* Flexbox-Layout */
+    flex-wrap: wrap; /* Bilder umbrechen, wenn sie den Container überlaufen */
+    gap: 1rem; /* Abstand zwischen den Bildern */
+    justify-content: center; /* Zentriert die Bilder */
+  }
+  
+  .dog-gallery img {
+    width: 100%; /* Bilder füllen die maximale Breite des Containers */
+    max-width: 300px; /* Begrenzung der maximalen Breite der Bilder */
+    border-radius: 8px; /* Abgerundete Ecken für ein weicheres Aussehen */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Leichte Schatten für einen 3D-Effekt */
+  }
+
+  figure{
+    display:table;
+  }
+
+  figcaption{
+    opacity: 0;
+  }
+
+  figure:hover .figc{
+    opacity: 1;
+  }
+  
+  /* Formularstil - Vertikale Ausrichtung und Stil der Formularelemente */
+  form {
+    display: flex; /* Flexbox-Layout */
+    flex-direction: column; /* Vertikale Ausrichtung der Formularelemente */
+  }
+  
+  label {
+    font-weight: bold; /* Fettgedruckte Beschriftungen */
+    margin-bottom: .5rem; /* Abstand unterhalb der Beschriftungen */
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: .5rem; /* Innenabstand innerhalb der Eingabeelemente */
+    margin-bottom: 1rem; /* Abstand unterhalb der Eingabeelemente */
+    border: 1px solid #ccc; /* Rahmenfarbe der Eingabeelemente */
+    border-radius: 4px; /* Abgerundete Ecken für Eingabeelemente */
+    width: 100%; /* Eingabeelemente füllen die Breite des Containers */
+  }
+  
+  /* Button-Stil - Verbesserung des Aussehens und der Benutzerinteraktion */
+  button {
+    padding: .75rem; /* Innenabstand innerhalb des Buttons */
+    background-color: orangered; /* Hintergrundfarbe des Buttons */
+    color: white; /* Textfarbe des Buttons */
+    border: none; /* Entfernt den Standardrahmen */
+    border-radius: 4px; /* Abgerundete Ecken für den Button */
+    cursor: pointer; /* Zeigeränderung beim Überfahren des Buttons */
+    transition: background-color 0.3s ease; /* Übergangseffekt für die Hintergrundfarbe */
+  }
+  
+  button:hover {
+    background-color: #ff5733; /* Dunklere Hintergrundfarbe beim Überfahren */
+  }
+  
+  /* Footerstil - Zentrierte Ausrichtung und dezente Farbgebung */
+  footer {
+    text-align: center; /* Zentrierte Textausrichtung */
+    padding: 2rem 0; /* Vertikaler Innenabstand */
+    border-top: 2px solid #29213f; /* Obere Grenze zur Trennung vom restlichen Inhalt */
+    margin-top: 2rem; /* Abstand oberhalb des Footers */
+    font-size: .9rem; /* Kleinere Schriftgröße für den Footertext */
+    color: #666; /* Dezente Textfarbe für den Footer */
+  }
+
+  /*
+  
+  Erläuterungen:
+
+    Einfacher Reset:
+        Setzt Padding, Margin und Box-Sizing für alle Elemente zurück, um Browser-Inkonsistenzen zu vermeiden.
+
+    Grundlegende Stilisierung für den Body:
+        Setzt Hintergrundfarbe, Schriftart, Linienhöhe und Textfarbe, um eine moderne und gut lesbare Basis zu schaffen.
+
+    Header-Stil:
+        Zentriert den Text und fügt Abstände und eine untere Grenze hinzu, um den Header klar vom restlichen Inhalt abzugrenzen.
+
+    Stil für das Hauptüberschrift h1 im Header:
+        Setzt die Farbe der Hauptüberschrift, um sie hervorzuheben.
+
+    Hauptinhalt:
+        Begrenzung der maximalen Breite, zentrierte Ausrichtung und visuelle Verbesserungen wie Hintergrundfarbe, abgerundete Ecken und Schatten.
+
+    Abstand zwischen Abschnitten im Hauptinhalt:
+        Fügt Abstand zwischen den Abschnitten hinzu, um sie optisch zu trennen.
+
+    Stil für Unterüberschriften h2:
+        Setzt Farbe, Grenze und Abstände, um Unterüberschriften klar vom Text zu unterscheiden.
+
+    Listenstil:
+        Entfernt Standardlistenpunkte und fügt benutzerdefinierte Punkte hinzu, um die Listen optisch ansprechender zu gestalten.
+
+    Bildergalerie:
+        Flexibles Layout für eine gleichmäßige Verteilung der Bilder, inklusive abgerundeter Ecken und Schatten.
+
+    Formularstil:
+        Vertikale Ausrichtung und Stil der Formularelemente, um die Benutzerfreundlichkeit zu verbessern.
+
+    Button-Stil:
+        Verbesserung des Aussehens und der Benutzerinteraktion durch Abstände, Farben und Übergangseffekte.
+
+    Footer-Stil:
+        Zentrierte Ausrichtung und dezente Farbgebung, um den Abschluss der Seite zu markieren.
+        */
